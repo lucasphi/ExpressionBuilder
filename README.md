@@ -7,6 +7,8 @@ Create expressions programmatially to be used with Linq to Entities or Linq to D
 <pre>var exp = new ExpressionBuilder&lt;Entity&gt;();
 exp.Append(c => c.PropertyOne == 1);
 exp.Append(c => c.PropertyTwo == true);
+
+var result = dbSet.Where(exp.Expression);
 </pre>
 
 Sources:
